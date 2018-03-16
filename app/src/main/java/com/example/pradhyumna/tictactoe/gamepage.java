@@ -9,8 +9,7 @@ import android.widget.Toast;
 
 public class gamepage extends AppCompatActivity {
     int turn;
-    int score1;
-    int score2;
+    int t;
 Button b1,b2,b3,b4,b5,b6,b7,b8,b9,xb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +51,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,xb;
                         b1.setText("X");
                     }
                 }
+                t++;
                 endgame();
 
             }
@@ -72,6 +72,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,xb;
                         b2.setText("X");
                     }
                 }
+                t++;
                 endgame();
 
             }
@@ -93,6 +94,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,xb;
                     }
 
                 }
+                t++;
                 endgame();
 
             }
@@ -113,6 +115,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,xb;
                         b4.setText("X");
                     }
                 }
+                t++;
                 endgame();
 
             }
@@ -133,6 +136,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,xb;
                         b5.setText("X");
                     }
                 }
+                t++;
                 endgame();
 
             }
@@ -153,6 +157,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,xb;
                         b6.setText("X");
                     }
                 }
+                t++;
                 endgame();
             }
         });
@@ -172,6 +177,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,xb;
                         b7.setText("X");
                     }
                 }
+                t++;
                 endgame();
             }
         });
@@ -191,6 +197,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,xb;
                         b8.setText("X");
                     }
                 }
+                t++;
                 endgame();
             }
         });
@@ -210,6 +217,7 @@ Button b1,b2,b3,b4,b5,b6,b7,b8,b9,xb;
                         b9.setText("X");
                     }
                 }
+                t++;
                 endgame();
 
             }
@@ -308,6 +316,16 @@ public void endgame(){
         Toast.makeText(gamepage.this, "Winner Player O",Toast.LENGTH_LONG).show();
         end=true;
     }
+    else
+        {
+            if(t == 9)
+            {
+                Toast.makeText(gamepage.this , "Drawn Game" , Toast.LENGTH_LONG).show();
+                end = true;
+            }
+
+        }
+
 
    if(end)
    {
